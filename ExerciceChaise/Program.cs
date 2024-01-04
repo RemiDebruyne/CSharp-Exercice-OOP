@@ -18,9 +18,9 @@ List<Chaise> list = new List<Chaise>()
 //chaise2.AfficherLesInfos();
 //superChaise.AfficherLesInfos();
 
-//foreach (Chaise chaise in list)
-//{
-//    Console.WriteLine(chaise.ToString());
-//}
+foreach (Chaise chaise in list)
+{
+    Console.WriteLine(chaise.ToString());
+}
 
-Console.WriteLine(maChaise);
+//Console.WriteLine(maChaise);

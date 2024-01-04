@@ -24,7 +24,8 @@ namespace ExerciceChaise
         // Methods
         public void AfficherLesInfos()
         {
-            Console.WriteLine(ToString());
+            Console.WriteLine(ToString()); 
+            Console.WriteLine(this); //this fait référence à l'objet dans lequel AfficherLesInfos() est instensié. Si j'utilise maChaise.AfficherLesInfos alors this sera égale à maChaise
         }
 
         public override string ToString()
@@ -44,7 +45,7 @@ namespace ExerciceChaise
 
         }
         /// <summary>
-        /// Constructor de chaise avec param (int nbPied, string materiaux, string couleur)
+        /// beep boop
         /// </summary>
         public Chaise(int nbPied, string materiaux, string couleur)
         {
