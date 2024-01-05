@@ -8,12 +8,21 @@ namespace ExerciceSalarie.Classes
 {
     internal class Salarie
     {
+        //Attributs
         private static int _nombreEmployes;
         private static int _salaireTotale;
         public int _salaire;
-        public static int NombreEmployes { get => _nombreEmployes; set => _nombreEmployes = value; }
-        public static int SalaireTotale { get => _salaireTotale; set => _salaireTotale = value; }
 
+        //Properties
+        public static int NombreEmployes { get; set; }
+        public static int SalaireTotale { get; set; }
+        public string Matricule { get; set; }
+        public string Service { get; set; }
+        public string Categorie { get; set; }
+
+        
+
+        //Porperty with get only 
         public static double MoyenneSalaire => SalaireTotale / NombreEmployes;
         public string Nom { get; set; }
         public int Salaire
@@ -29,9 +38,7 @@ namespace ExerciceSalarie.Classes
 
             }
         }
-        public string Matricule { get; set; }
-        public string Service { get; set; }
-        public string Categorie { get; set; }
+
 
 
 
@@ -43,7 +50,7 @@ namespace ExerciceSalarie.Classes
 
         public override string ToString()
         {
-            return "Le salaire de l'employé " + Nom + " matricule "+ Matricule + " est de " + Salaire + " poutres";
+            return "Le salaire de l'employé " + Nom + " matricule " + Matricule + " est de " + Salaire + " poutres";
         }
 
 
@@ -69,6 +76,7 @@ namespace ExerciceSalarie.Classes
             Categorie = "cadre";
             NombreEmployes++;
         }
+
         public Salarie(string nom, int salaire, string service, string categorie) : this()
         {
             Nom = nom;
