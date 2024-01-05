@@ -94,7 +94,7 @@ namespace ExerciceWaterTank.Classes
         {
             NombreDeCiterne++;
             PoidAVide = 10;
-            CapaciteTotale = capaciteTotale;
+            CapaciteTotale = capaciteTotale;    
             QuantiteActuel = quantiteDEau;
             Nom = nom;
         }
