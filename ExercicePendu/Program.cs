@@ -18,5 +18,3 @@ if (pendu.Mot == pendu.Masque)
 }
 if (pendu.NbEssaie == 0)
     Console.WriteLine("T'as perdu");
-//pendu.GenererMasque();
-//Console.WriteLine(pendu.Masque);

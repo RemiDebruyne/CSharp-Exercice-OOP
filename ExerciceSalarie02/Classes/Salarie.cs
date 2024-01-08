@@ -4,14 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ExerciceSalarie.Classes
+namespace ExerciceSalarie02.Classes
 {
     internal class Salarie
     {
         //Attributs
         private static int _nombreEmployes;
-        private static int _salaireTotale;
+        private static int _SalaireTotale;
+        private static int _moyenneSalaire;
         public int _salaire;
+        public string _nom;
+        public string _service;
+        public string _categorie;
+        public string _matricule;
 
         //Properties
         public static int NombreEmployes { get; set; }
@@ -20,7 +25,8 @@ namespace ExerciceSalarie.Classes
         public string Service { get; set; }
         public string Categorie { get; set; }
 
-        
+
+
 
         //Porperty with get only 
         public static double MoyenneSalaire => SalaireTotale / NombreEmployes;
@@ -42,7 +48,7 @@ namespace ExerciceSalarie.Classes
 
 
 
-        
+
         static public void AfficherInfosEntreprises()
         {
             Console.WriteLine("Le nombre total de salariés est de " + NombreEmployes + " et leur salaires est de " + SalaireTotale + " euros");
@@ -51,11 +57,11 @@ namespace ExerciceSalarie.Classes
         //Override ToString
         public override string ToString()
         {
-            return "Le salaire de l'employé " + Nom + " matricule " + Matricule + " est de " + Salaire + " poutres";
-        }
+            return ("Le salaire de l'employé " + Nom + " matricule " + Matricule + " est de " + Salaire + " poutres");
 
+        }
         //Affiche les infos des employés
-        public virtual void AfficherInfosEmployes()
+        public virtual void AfficherSalaires()
         {
             Console.WriteLine(this);
         }
@@ -71,9 +77,9 @@ namespace ExerciceSalarie.Classes
         {
             Nom = "Jean";
             Salaire = 8;
-            Matricule = Guid.NewGuid().ToString();
-            Service = "marketing";
-            Categorie = "cadre";
+            Matricule = "M000";
+            Service = "S000";
+            Categorie = "C000";
             NombreEmployes++;
         }
 
@@ -89,3 +95,4 @@ namespace ExerciceSalarie.Classes
 
     }
 }
+
