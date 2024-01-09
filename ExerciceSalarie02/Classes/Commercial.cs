@@ -26,11 +26,17 @@ namespace ExerciceSalarie02.Classes
         }
         public override string ToString()
         {
-            return ("Le salaire de l'employé " + Nom + " matricule " + Matricule + " est de " + Salaire + (Ca * Commission / 100) + " poutres");
+            return ($"Nom : {Nom}" +
+                            $"Salaire : {Salaire}" +
+                            $"Matricule : {Matricule}" +
+                            $"Service : {Service}" +
+                            $"Categorie : {Categorie}" +
+                            $"Chiffre d'affaire : {Ca}" +
+                            $"Commission : {Commission}");
         }
         override public void AfficherSalaires()
         {
-            Console.WriteLine(this);
+            Console.WriteLine("Le salaire de l'employé " + Nom + " matricule " + Matricule + " est de " + Salaire + (Ca * Commission/ 100) + " poutres");
         }
     }
 }

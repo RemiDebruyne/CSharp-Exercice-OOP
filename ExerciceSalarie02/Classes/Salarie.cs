@@ -10,18 +10,21 @@ namespace ExerciceSalarie02.Classes
     {
         //Attributs
         private static int _nombreEmployes;
+        private static List<Salarie> _mesEmployes = new List<Salarie>(20);
         private static int _SalaireTotale;
         private static int _moyenneSalaire;
-        public int _salaire;
-        public string _nom;
-        public string _service;
-        public string _categorie;
-        public string _matricule;
+        protected int _salaire;
+        protected string _nom;
+        protected string _service;
+        protected string _categorie;
+        protected int _matricule;
+        
+
 
         //Properties
         public static int NombreEmployes { get; set; }
         public static int SalaireTotale { get; set; }
-        public string Matricule { get; set; }
+        public int Matricule { get; set; }
         public string Service { get; set; }
         public string Categorie { get; set; }
 
@@ -45,9 +48,7 @@ namespace ExerciceSalarie02.Classes
             }
         }
 
-
-
-
+        internal static List<Salarie> MesEmployes { get => _mesEmployes; set => _mesEmployes = value; }
 
         static public void AfficherInfosEntreprises()
         {
@@ -57,18 +58,51 @@ namespace ExerciceSalarie02.Classes
         //Override ToString
         public override string ToString()
         {
-            return ("Le salaire de l'employé " + Nom + " matricule " + Matricule + " est de " + Salaire + " poutres");
+            return ($"Nom : {Nom}" +
+                $"Salaire : {Salaire}" +
+                $"Matricule : {Matricule}" +
+                $"Service : {Service}" +
+                $"Categorie : {Categorie}");
 
         }
         //Affiche les infos des employés
         public virtual void AfficherSalaires()
         {
-            Console.WriteLine(this);
+            Console.WriteLine("Le salaire de l'employé " + Nom + " matricule " + Matricule + " est de " + Salaire + " poutres");
         }
 
         static public void AfficherMoyenneSalaire()
         {
             Console.WriteLine(MoyenneSalaire);
+        }
+
+        static public void CreerEmploye(bool isCommercial) //paramtres = les params du cosntructeur, soit : nom, salaire, categorie ...
+        {
+            Console.WriteLine("Quelle est le nom de votre employé");
+            string nom = Console.ReadLine();
+
+            Console.WriteLine("Quelle est le salaire de votre employé");
+            if (!int.TryParse(Console.ReadLine(), out int salaire))
+                Console.WriteLine("valeur incorrecte");
+
+            Console.WriteLine("Quelle est le service de votre employé");
+            string service = Console.ReadLine();
+
+            Console.WriteLine("Quelle est la catégorie de votre employé");
+            string categorie = Console.ReadLine();
+
+            if (isCommercial)
+            {
+                Console.WriteLine("Quelle est le chiffre d'affaire de votre employé");
+                if (!int.TryParse(Console.ReadLine(), out int ca))
+                    Console.WriteLine("valeur incorrecte");
+
+                Console.WriteLine("Quelle est la commission ne % de votre employé");
+                if (!int.TryParse(Console.ReadLine(), out int commission))
+                    Console.WriteLine("valeur incorrecte");
+                 MesEmployes.Add( new Commercial(nom, salaire, service, categorie, ca, commission))
+            }
+            MesEmployes.Add(new Salarie(nom, salaire, service, categorie));
         }
 
 
@@ -77,20 +111,20 @@ namespace ExerciceSalarie02.Classes
         {
             Nom = "Jean";
             Salaire = 8;
-            Matricule = "M000";
             Service = "S000";
             Categorie = "C000";
-            NombreEmployes++;
+            Matricule = NombreEmployes++;
         }
 
         public Salarie(string nom, int salaire, string service, string categorie) : this()
         {
             Nom = nom;
             Salaire = salaire;
-            Matricule = Guid.NewGuid().ToString();
             Service = service;
             Categorie = categorie;
         }
+
+
 
 
     }

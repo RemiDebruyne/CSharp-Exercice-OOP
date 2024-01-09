@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Runtime.ExceptionServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,7 +12,9 @@ namespace ExerciceSalarie02.Classes
     {
         static public void AfficherMenu()
         {
-            while (true) {
+            while (true)
+            {
+
                 Console.Clear();
                 Console.WriteLine("--- Gestion des employés ---");
                 Console.WriteLine("1--- Ajouter un employé");
@@ -26,20 +30,23 @@ namespace ExerciceSalarie02.Classes
                         Console.WriteLine("1) Salarié");
                         Console.WriteLine("2) Commerciale");
                         Console.WriteLine("3) Retour");
+
                         switch (Console.ReadLine())
                         {
+
                             case "1":
-
-
+                                Salarie.CreerEmploye(false);
                                 break;
                             case "2":
+                                Salarie.CreerEmploye(true);
                                 break;
                             case "3":
                                 break;
-
                         }
                         break;
                     case "2":
+                        foreach (Salarie salarie in Salarie.MesEmployes)
+                            break
                         break;
                     case "3":
                         break;
@@ -51,7 +58,7 @@ namespace ExerciceSalarie02.Classes
                 }
 
             }
-            
+
 
         }
     }
