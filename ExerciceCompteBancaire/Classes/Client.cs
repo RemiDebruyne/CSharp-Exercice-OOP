@@ -12,7 +12,7 @@ namespace ExerciceCompteBancaire.Classes
         private string _nom;
         private string _prenom;
         private int _id;
-        private List<CompteBancaire> _listComptes = new List<CompteBancaire>();
+        private List<CompteBancaire> _listComptes = new();
         private string _telephone;
 
         public string Nom { get => _nom; set => _nom = value; }
@@ -36,6 +36,37 @@ namespace ExerciceCompteBancaire.Classes
             {
                 Console.WriteLine(this);
 
+            }
+        }
+
+        protected void CreerCompte()
+        {
+            Console.Write("Comment s'appelle votre compte");
+            string nom = Console.ReadLine();
+
+            Console.WriteLine("Quelle est le type du compte :" +
+                "\n\t 1- Courant" +
+                "\n\t 2- Epargne" +
+                "\n\t 3- Payant");
+            string typeDeCompte = Console.ReadLine();
+            switch (typeDeCompte)
+            {
+
+                case "1":
+                    new CompteCourant(nom, this );
+                    break;
+
+                case "2":
+                    new CompteEpargne(nom, this );
+                    break;
+
+                case "3":
+                    new ComptePayant(nom, this );
+                    break;
+
+                default:
+                    Console.WriteLine("Zeub");
+                    break;
             }
         }
 
