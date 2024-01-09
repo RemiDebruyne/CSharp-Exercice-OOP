@@ -48,7 +48,7 @@ namespace ExerciceSalarie02.Classes
             }
         }
 
-        internal static List<Salarie> MesEmployes { get => _mesEmployes; set => _mesEmployes = value; }
+        public static List<Salarie> MesEmployes { get => _mesEmployes; set => _mesEmployes = value; }
 
         static public void AfficherInfosEntreprises()
         {
@@ -100,9 +100,16 @@ namespace ExerciceSalarie02.Classes
                 Console.WriteLine("Quelle est la commission ne % de votre employé");
                 if (!int.TryParse(Console.ReadLine(), out int commission))
                     Console.WriteLine("valeur incorrecte");
-                 MesEmployes.Add( new Commercial(nom, salaire, service, categorie, ca, commission))
+                MesEmployes.Add(new Commercial(nom, salaire, service, categorie, ca, commission));
             }
             MesEmployes.Add(new Salarie(nom, salaire, service, categorie));
+        }
+
+        static public void RechercherEmployer()
+        {
+            Console.Write("Nom de l'employé: ");
+            string nom = Console.ReadLine() ?? "";
+
         }
 
 

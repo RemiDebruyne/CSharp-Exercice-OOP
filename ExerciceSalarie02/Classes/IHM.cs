@@ -45,12 +45,25 @@ namespace ExerciceSalarie02.Classes
                         }
                         break;
                     case "2":
-                        foreach (Salarie salarie in Salarie.MesEmployes)
-                            break
+                        foreach (Salarie s in Salarie.MesEmployes)
+                            s.AfficherSalaires();
                         break;
                     case "3":
+                        Console.Write("Nom de l'employé: ");
+                        string nom = Console.ReadLine();
+                        // Pour un seul emmployé
+                        // Salarie found = Salarie.MesEmployes.Find(employes => employes.Nom.StartsWith(nom));
+                        //found.AfficherSalaires();
+
+                        // Pour trouver plusieurs employés
+                        List<Salarie> found = Salarie.MesEmployes.Where(employe => employe.Nom.ToLower().StartsWith(nom.ToLower())).ToList();
+                        if (found.Count > 0)
+                            foreach (Salarie s in found)
+                                s.AfficherSalaires();
+
                         break;
                     case "0":
+                        Environment.Exit(0);
                         break;
                     default:
                         Console.WriteLine("Valeur incorrecte, utilisez 1/2/3/4");
