@@ -14,12 +14,14 @@ namespace ExeerciceFigure.Classes
 
         internal Point Origine { get => _origine; set => _origine = value; }
 
-        public void Deplacement(double pointX, double pointY)
-        {
-            Origine.PosX += pointX;
-            Origine.PosY += pointY;
-        }
-
+        // 
+        public abstract void Deplacement(double pointX, double pointY);
+        //public abstract void Deplacement(double pointX, double pointY)
+        //{
+        //    Origin.PosX += pointX;
+        //    Origin.PosY += PointY
+        //}
+        
         protected Figure(double posX, double posY)
         {
             _origine = new(posX, posY);

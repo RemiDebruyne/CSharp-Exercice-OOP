@@ -9,10 +9,40 @@ namespace ExeerciceFigure.Classes
     internal class Triangle : Figure
     {
         private double _hauteur;
-        private double _base;
+        private double _baseT;
+        private Point _pointA;
+        private Point _pointB;
+        private Point _pointC;
 
-        public Triangle(double posX, double posY) : base(posX, posY)
+
+        internal Point PointA { get => _pointA; set => _pointA = value; }
+        internal Point PointB { get => _pointB; set => _pointB = value; }
+        internal Point PointC { get => _pointC; set => _pointC = value; }
+
+        public override void Deplacement(double pointX, double pointY)
         {
+            PointA.PosX += pointX;
+            PointA.PosY += pointY;
+
+            PointB.PosX += pointX;
+            PointB.PosY += pointY;
+
+            PointC.PosX += pointX;
+            PointC.PosY += pointY;
+
+        }
+        public Triangle(double posX, double posY, double hauteur, double baseT) : base(posX, posY)
+        {
+            _hauteur = hauteur;
+            _baseT = baseT;
+            PointA.PosX = posX;
+            PointA.PosY = posY;
+
+            PointB.PosX = posX + baseT;
+            PointB.PosY =posY;
+
+            PointC.PosX = posX + (baseT / 2);
+            PointC.PosY = posY;
         }
     }
 }
