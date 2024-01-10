@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicePendu", "ExercicePe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExerciceSalarie02", "ExerciceSalarie02\ExerciceSalarie02.csproj", "{DB4319FB-F5A6-4C5F-A388-93D2957719B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciceCompteBancaire", "ExerciceCompteBancaire\ExerciceCompteBancaire.csproj", "{19442084-63BB-4678-9998-21B17A8BC3BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExerciceCompteBancaire", "ExerciceCompteBancaire\ExerciceCompteBancaire.csproj", "{19442084-63BB-4678-9998-21B17A8BC3BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExeerciceFigure", "ExeerciceFigure\ExeerciceFigure.csproj", "{EFD0C301-C9BE-41B3-AD7D-4ECE260CDB6B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{19442084-63BB-4678-9998-21B17A8BC3BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19442084-63BB-4678-9998-21B17A8BC3BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19442084-63BB-4678-9998-21B17A8BC3BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFD0C301-C9BE-41B3-AD7D-4ECE260CDB6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD0C301-C9BE-41B3-AD7D-4ECE260CDB6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD0C301-C9BE-41B3-AD7D-4ECE260CDB6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD0C301-C9BE-41B3-AD7D-4ECE260CDB6B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{98F90E19-A9F3-4612-BAE6-CF05652DC378} = {ABE75F18-3988-44D8-9B59-71694DC2F317}
 		{DB4319FB-F5A6-4C5F-A388-93D2957719B3} = {ABE75F18-3988-44D8-9B59-71694DC2F317}
 		{19442084-63BB-4678-9998-21B17A8BC3BF} = {ABE75F18-3988-44D8-9B59-71694DC2F317}
+		{EFD0C301-C9BE-41B3-AD7D-4ECE260CDB6B} = {ABE75F18-3988-44D8-9B59-71694DC2F317}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {58126DE3-94A5-488C-9E22-D8E278F5778C}
