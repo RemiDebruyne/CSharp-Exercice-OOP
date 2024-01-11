@@ -16,10 +16,6 @@ using System.Runtime.CompilerServices;
 
 //mesStrings.Read();
 
-List<Pile<string>> stringPiles = new();
-List<Pile<decimal>> decimalPiles = new();
-List<Pile<Personne>> personnePiles = new();
-
 
 Console.WriteLine("=== Menu Principal ===\n" +
     "1. Empiler\n" +
@@ -34,21 +30,8 @@ switch (Console.ReadLine())
         switch (Console.ReadLine())
         {
             case "1":
-
-                if(stringPiles.Count == 0)
-                     new Pile<string>();
-
-                Pile<string> stringPile = stringPiles[stringPiles.Count - 1]
-                Console.WriteLine("Que voulez vous ajouter");
-                string input = Console.ReadLine();
-                stringPile.Add(input);
-                
                 break;
             case "2":
-                Pile<string> pile = stringPiles[stringPiles.Count - 1]
-                Console.WriteLine("Que voulez vous ajouter");
-                string input = Console.ReadLine();
-                stringPile.Add(input);
                 break;
             case "3":
                 break;

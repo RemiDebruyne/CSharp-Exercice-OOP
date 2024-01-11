@@ -35,18 +35,15 @@ namespace ExercicePile.Classes
         {
             Console.WriteLine(_nbOfElementsInStack);
         }
-        public bool Add(T input)
+        public void Add(T input)
         {
+            //Ce code fonctionne mais ne vérifie pas si on essaye d'ajouter un élément dans un tableau plein
             if (_nbOfElementsInStack < _elementsInStack.Length)
             {
                 _elementsInStack[_nbOfElementsInStack++] = input;
-                return true;
+
             }
-
-            return false;
-
         }
-
         public void Remove()
         {
             _elementsInStack[_nbOfElementsInStack--] = default;
@@ -60,6 +57,16 @@ namespace ExercicePile.Classes
             _elementsInStack[index] = default;
             _nbOfElementsInStack--;
         }
+
+        public static void GetAddType(string action)
+        {
+            Console.WriteLine($"Que voulez vous {action} ? :" +
+                $"\t\n 1. une string" +
+                $"\t\n 2. un decimal" +
+                $"\t\n 3. une personne");
+        }
+
+        
 
     }
 }
