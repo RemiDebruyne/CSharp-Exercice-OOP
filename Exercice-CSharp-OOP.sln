@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExerciceCompteBancaire", "E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExeerciceFigure", "ExeerciceFigure\ExeerciceFigure.csproj", "{EFD0C301-C9BE-41B3-AD7D-4ECE260CDB6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicePile", "ExercicePile\ExercicePile.csproj", "{7C26ACF3-73C8-466E-97DF-53F739390AA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicePile", "ExercicePile\ExercicePile.csproj", "{7C26ACF3-73C8-466E-97DF-53F739390AA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciceHotel", "ExerciceHotel\ExerciceHotel.csproj", "{6A292CBE-7A09-4009-9F6C-E79596E38940}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,10 @@ Global
 		{7C26ACF3-73C8-466E-97DF-53F739390AA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C26ACF3-73C8-466E-97DF-53F739390AA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C26ACF3-73C8-466E-97DF-53F739390AA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A292CBE-7A09-4009-9F6C-E79596E38940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A292CBE-7A09-4009-9F6C-E79596E38940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A292CBE-7A09-4009-9F6C-E79596E38940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A292CBE-7A09-4009-9F6C-E79596E38940}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +94,7 @@ Global
 		{19442084-63BB-4678-9998-21B17A8BC3BF} = {ABE75F18-3988-44D8-9B59-71694DC2F317}
 		{EFD0C301-C9BE-41B3-AD7D-4ECE260CDB6B} = {ABE75F18-3988-44D8-9B59-71694DC2F317}
 		{7C26ACF3-73C8-466E-97DF-53F739390AA4} = {ABE75F18-3988-44D8-9B59-71694DC2F317}
+		{6A292CBE-7A09-4009-9F6C-E79596E38940} = {ABE75F18-3988-44D8-9B59-71694DC2F317}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {58126DE3-94A5-488C-9E22-D8E278F5778C}
